@@ -1,0 +1,70 @@
+<?xml version="1.0" ?>
+<launch>
+  <arg name="x_ar" default="2.0"/>
+  <arg name="y_ar" default="0.5"/>
+  <arg name="z_ar" default="0.0"/>
+  <arg name="roll" default="0.0"/>
+  <arg name="pitch" default="0.0"/>
+  <arg name="yaw" default="0.0"/>
+  
+  <arg name="x_ar2" default="2.0"/>
+  <arg name="y_ar2" default="2.0"/>
+  <arg name="z_ar2" default="0.0"/>
+  
+  <arg name="x_ar3" default="2.0"/>
+  <arg name="y_ar3" default="-2.0"/>
+  <arg name="z_ar3" default="0.0"/>
+
+<!--                     URDF FILES                  -->
+
+  <arg name="urdf_robot_file" default="/home/fadal/Documents/Projet/catkin_ws/src/artags_track/urdf/ar_2022.urdf"/>
+  <arg name="robot_name" default="ar_2022"/>
+  
+  <!--arg name="urdf_robot_file_2" default="/home/fadal/Documents/Projet/catkin_ws/src/artags_track/urdf/ar_2022_2.urdf"/>
+  <arg name="robot_name_2" default="ar_2022_2"/>
+  
+  <arg name="urdf_robot_file_3" default="/home/fadal/Documents/Projet/catkin_ws/src/artags_track/urdf/ar_2022_3.urdf"/>
+  <arg name="robot_name_3" default="ar_2022_3"/ -->
+  
+  
+  
+  
+  <include file="/home/fadal/Documents/Projet/catkin_ws/src/turtlebot3_simulations/turtlebot3_gazebo/launch/spawn_robot_urdf.launch">
+    <arg name="x" value="$(arg x_ar)" />
+    <arg name="y" value="$(arg y_ar)"/>
+    <arg name="z" value="$(arg z_ar)"/>
+    <arg name="roll" value="$(arg roll)"/>
+    <arg name="pitch" value="$(arg pitch)"/>
+    <arg name="yaw" value="$(arg yaw)"/>
+    
+    <arg name="urdf_robot_file" value="$(arg urdf_robot_file)"/>
+    <arg name="robot_name" value="$(arg robot_name)"/>
+  </include>
+  
+  <!--include file="/home/fadal/Documents/Projet/catkin_ws/src/turtlebot3_simulations/turtlebot3_gazebo/launch/spawn_robot_urdf.launch">
+    <arg name="x" value="$(arg x_ar2)" />
+    <arg name="y" value="$(arg y_ar2)"/>
+    <arg name="z" value="$(arg z_ar2)"/>
+    <arg name="roll" value="$(arg roll)"/>
+    <arg name="pitch" value="$(arg pitch)"/>
+    <arg name="yaw" value="$(arg yaw)"/>
+    
+    <arg name="urdf_robot_file" value="$(arg urdf_robot_file_2)"/>
+    <arg name="robot_name" value="$(arg robot_name_2)"/>
+  </include>
+  
+  <include file="/home/fadal/Documents/Projet/catkin_ws/src/turtlebot3_simulations/turtlebot3_gazebo/launch/spawn_robot_urdf.launch">
+    <arg name="x" value="$(arg x_ar3)" />
+    <arg name="y" value="$(arg y_ar3)"/>
+    <arg name="z" value="$(arg z_ar3)"/>
+    <arg name="roll" value="$(arg roll)"/>
+    <arg name="pitch" value="$(arg pitch)"/>
+    <arg name="yaw" value="$(arg yaw)"/>
+    
+    <arg name="urdf_robot_file" value="$(arg urdf_robot_file_3)"/>
+    <arg name="robot_name" value="$(arg robot_name_3)"/>
+  </include -->
+
+</launch>
+
+

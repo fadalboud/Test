@@ -1,0 +1,8 @@
+prefix=/home/fadal/Documents/Projet/catkin_ws/devel
+
+Name: multi_turtlebot3_nav
+Description: Description of multi_turtlebot3_nav
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

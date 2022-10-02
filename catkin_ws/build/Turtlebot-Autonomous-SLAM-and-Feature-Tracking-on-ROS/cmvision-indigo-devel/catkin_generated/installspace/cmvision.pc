@@ -1,0 +1,8 @@
+prefix=/home/fadal/Documents/Projet/catkin_ws/install
+
+Name: cmvision
+Description: Description of cmvision
+Version: 0.4.1
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib 
+Requires: message_runtime std_msgs
