@@ -105,10 +105,10 @@ The following figure shows when /cmd_web is selected.
 ### Time: 
 Question 1 : 3 hours (Installation of the virtual machine, Ubuntu 20.04, ROS Noetic, Turtlebot3 packages, navigation set)
 
-Question 2 : 4 hours (Learn about MuxSelect, coding of different nodes)
+Question 2 : 4 hours (Learn about Topic_tools, coding of different nodes)
 
-Question 3 : 3 days (5 hours a day) + 1 hours ( Learning about MQTT, Try diffrent packages, Coding, fixing errors) 
+Question 3 : 5 days (5 hours a day) + 1 hours ( Learning about MQTT, Try diffrent packages, Coding, fixing errors) 
 
-Question 4 : 5 days (5 hours a day) (blender install and preparing Ar tags boxes, install ar_track_alvar, coding)  
+Question 4 : 7 days (5 hours a day) (blender install and preparing Ar tags boxes, install ar_track_alvar, coding)  
 
 Note that time ????
