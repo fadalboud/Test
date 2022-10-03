@@ -51,7 +51,7 @@ To run the teleoperation using the keyboard, use:
 $ roslaunch turtlebot3_teleop turtlebot3_teleop_key.launch
 ```
 
-To send navigation goals to the navigations goal stacks, you can use the 2D Nav Goal in Rviz or run:
+To send navigation goals to the navigation goal stack, you can use the 2D Nav Goal in Rviz or run:
 ```
 ```
 
