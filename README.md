@@ -56,6 +56,12 @@ To send navigation goals to the navigations goal stacks, you can use the 2D Nav 
 ```
 
 ## 2 Command Multiplexer 
+In this part, the addition of a multiplexer node that allows to switch between two speed topics and publish on cmd_vel topic.
+
+To do so, Topic tools services is used to select a topic that publishes on cmd_vel. 
+The mux node can be found in mux_node.py. 
+
+
 
 ## 3 Remote Teleoperation 
 
