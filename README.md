@@ -61,7 +61,41 @@ In this part, the addition of a multiplexer node that allows to switch between t
 To do so, Topic tools services is used to select a topic that publishes on cmd_vel. 
 The mux node can be found in mux_node.py. 
 
+From the catkin workspace you can find code file following the path: 
+```
+cd src/scripts/Delivery/question2
+```
 
+Then start the mux node: 
+```
+python3 mux_node.py
+```
+
+Then to start a node publishing on /cmd_local which publishes a constant speed command, run:
+```
+python3 move_forward.py
+```
+To start a node publishing on /cmd_web which allows the teleoperation with keyboard, run: 
+```
+python3 teleop_KB.py
+```
+
+To run the multiplexer of the two nodes, run: 
+```
+rosrun topic_tools mux cmd_vel cmd_local cmd_web mux:=mux_cmd_vel
+```
+
+To select the desired topic, run: 
+```
+rosservice call mux_cmd_vel/select "desired_topic"
+```
+The following figure shows when /cmd_local is selected.
+
+![select /cmd_local](https://imgur.com/DuRDNvu)
+
+The following figure shows when /cmd_web is selected.
+
+![Select /cmd_web](https://imgur.com/j5EbsPA)
 
 ## 3 Remote Teleoperation 
 
