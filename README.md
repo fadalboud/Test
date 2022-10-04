@@ -35,7 +35,7 @@ export TURTLEBOT3_MODEL=burger
 roslaunch turtlebot3_gazebo turtlebot3_empty_world.launch
 ```
 
-![Turtlebot3 burger empty world](https://imgur.com/a/Jb0FIhY)
+![Turtlebot3 burger empty world](Test/screenshots/Screenshot from 2022-10-03 16-13-01.png)
 
 Then launch the navigation from the navigation packages: 
 ```
