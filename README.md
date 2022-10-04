@@ -35,7 +35,7 @@ export TURTLEBOT3_MODEL=burger
 roslaunch turtlebot3_gazebo turtlebot3_empty_world.launch
 ```
 
-![Turtlebot3 burger empty world](./screenshots/Screenshot from 2022-10-03 16-13-01.png)
+![Turtlebot3 burger empty world](./screenshots/1.png)
 
 Then launch the navigation from the navigation packages: 
 ```
@@ -44,7 +44,7 @@ roslaunch turtlebot3_nav navigation.launch
 
 This launch file uses the amcl and move_base links to properly navigate the turtlebot in the map. The map was obtained using the lidar of the turtlebot. All these files can be found in folder "nav_robot".
 
-![Turtlebot3 navigation](https://imgur.com/iM9SYOK)
+![Turtlebot3 navigation](./screenshots/2.png)
 
 To run the teleoperation using the keyboard, use:
 ```
@@ -93,11 +93,11 @@ rosservice call mux_cmd_vel/select "desired_topic"
 ```
 The following figure shows when /cmd_local is selected.
 
-![select /cmd_local](https://imgur.com/DuRDNvu)
+![select /cmd_local](./screenshots/3.png)
 
 The following figure shows when /cmd_web is selected.
 
-![Select /cmd_web](https://imgur.com/j5EbsPA)
+![Select /cmd_web](./screenshots/4.png)
 
 ## 3 Remote Teleoperation 
 To answer this question, MQTT protocol is used. 
@@ -120,7 +120,7 @@ python3 publisher.py
 
 The following figure shows the communication and message transfer between client and server.
 
-![MQTT communication](https://imgur.com/JdxHXZn)
+![MQTT communication](./screenshots/5.png)
 
 ## 4 Ar Tags Track 
 The first step was to spawn AR tags in gazebo. To do so, ar tags boxes were created using blender. 
@@ -148,21 +148,21 @@ To start the navigation toward the Ar tag, run:
 python3 Ar_track_1.py
 ```
 
-![Ar tags on gazebo]()
+![Ar tags on gazebo](./screenshots/6.png)
 
 
-![Ar tags on rviz]()
+![Ar tags on rviz](./screenshots/7.png)
 
 
-![Ar pose marker]()
+![Ar pose marker](./screenshots/8.png)
 
 As shown in next figure, a camera was added to the turtlebot to visualize the Ar tag and track its position. 
 
-![Ar tag on camera]()
+![Ar tag on camera](./screenshots/9.png)
 
 The camera communicates the position of the AR tag to ar_track_alvar which returns a distance between the robot and the AR tag.
 
-![rqt graph]()
+![rqt graph](./screenshots/10.png)
 
 ## Notes 
 To run the Test, you can download the catkin workspace and run:
