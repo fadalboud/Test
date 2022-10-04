@@ -125,7 +125,7 @@ The following figure shows the communication and message transfer between client
 ## 4 Ar Tags Track 
 The first step was to spawn AR tags in gazebo. To do so, ar tags boxes were created using blender. 
 
-![Blender]()
+![Blender](./screenshots/11.png)
 
 To spawn AR tags in gazebo, from question4 folder launch:
 
