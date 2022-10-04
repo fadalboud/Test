@@ -53,6 +53,8 @@ $ roslaunch turtlebot3_teleop turtlebot3_teleop_key.launch
 
 To send navigation goals to the navigation goal stack, you can use the 2D Nav Goal in Rviz or run the following code to use move_base_msgs.msg:
 ```
+cd src/scripts/Delivery/question1
+python3 nav_goal.py
 ```
 
 ## 2 Command Multiplexer 
