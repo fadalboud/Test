@@ -98,10 +98,81 @@ The following figure shows when /cmd_web is selected.
 ![Select /cmd_web](https://imgur.com/j5EbsPA)
 
 ## 3 Remote Teleoperation 
+To answer this question, MQTT protocol is used. 
+First, go to folder:
+```
+cd src/scripts/Delivery/question3
+```
+
+Then run the mqtt subscriber which will listen to the keyboard and publish the command on python/mqtt topic by running:
+```
+python3 subscriber.py
+```
+
+The previous code can be on a machine with no ROS since it doesn't use ROS dependencies.
+
+Next, run the publisher which will get the command from python/mqtt topic and publishes it on /cmd_vel. Run:
+```
+python3 publisher.py
+```
+
+The following figure shows the communication and message transfer between client and server.
+
+![MQTT communication](https://imgur.com/JdxHXZn)
 
 ## 4 Ar Tags Track 
+The first step was to spawn AR tags in gazebo. To do so, ar tags boxes were created using blender. 
+
+![Blender]()
+
+To spawn AR tags in gazebo, from question4 folder launch:
+
+```
+roslaunch spawn_Artags.launch
+```
+an AR tag box will appear in gazebo. 
+
+To start the AR track package launch: 
+
+```
+ar_track_launch.launch
+```
+
+This code will start the tracking node using ar_track_alvar package; Using information from /ar_pose_marker topic.
+
+To start the navigation toward the Ar tag, run: 
+
+```
+python3 Ar_track_1.py
+```
+
+![Ar tags on gazebo]()
+
+
+![Ar tags on rviz]()
+
+
+![Ar pose marker]()
+
+As shown in next figure, a camera was added to the turtlebot to visualize the Ar tag and track its position. 
+
+![Ar tag on camera]()
+
+The camera communicates the position of the AR tag to ar_track_alvar which returns a distance between the robot and the AR tag.
+
+![rqt graph]()
 
 ## Notes 
+To run the Test, you can download the catkin workspace and run:
+```
+catkin_make
+```
+Note that for coding, xml was used for launch files and python was used for coding.
+
+Note that on my PC, i have windows so i had to use a virtual machine to use Ubuntu. It was really hard workin on this project since VM is really slow. 
+
+Please note also that, for the 4th question i tried to combine the 4th and the 6th question thus the use of the camera for the robot. 
+
 ### Time: 
 Question 1 : 3 hours (Installation of the virtual machine, Ubuntu 20.04, ROS Noetic, Turtlebot3 packages, navigation set)
 
@@ -110,5 +181,3 @@ Question 2 : 4 hours (Learn about Topic_tools, coding of different nodes)
 Question 3 : 5 days (5 hours a day) + 1 hours ( Learning about MQTT, Try diffrent packages, Coding, fixing errors) 
 
 Question 4 : 7 days (5 hours a day) (blender install and preparing Ar tags boxes, install ar_track_alvar, coding)  
-
-Note that time ????
